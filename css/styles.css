@@ -1,7 +1,11 @@
 html, body, h1, h3 {
-  height: 100%;
   margin: 0;
   padding: 0; 
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: #fff;
 }
 body {
   display: flex;
@@ -82,12 +86,28 @@ main {
 
 .section {
   background-color: #fff;
-  height: calc(100vh - 120px);
   padding: 10px;
   border: solid 1px red;
+  text-align: center;
 }
 .hero {
-  background: linear-gradient(to bottom, #014722, #07643C);
+  position: relative;
+  overflow: hidden;
+  /* background: linear-gradient(to bottom, #014722, #07643C); */
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.title, .image {
+  position: relative; /* Щоб контент був зверху відео */
+  z-index: 1;
+  color: white; /* Контент буде білим, щоб добре виглядати на відео */
 }
 .hero div {
   /* width: 50%; */
@@ -134,7 +154,15 @@ main {
   margin-top: 20px;
 }
 .footer {
+  display: flex;
+  justify-content: baseline;
   background-color: black;
   padding: 20px;
-  height: 100px;
+  color: #fff;
+}
+.footer-block{
+  width: 50%;
+}
+.right{
+  text-align: end;
 }
