@@ -22,39 +22,56 @@
             <div class="menu">
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li class="nav-item"><a href="#about">What is Playball</a></li>
-                        <li class="nav-item"><a href="#role">Choose your role</a></li>
+                        <li class="nav-item lang en"><a href="#about">What is Playball</a></li>
+                        <li class="nav-item lang pl"><a href="#about">Co to jest Playball</a></li>
+                        <li class="nav-item lang en"><a href="#role">Choose your role</a></li>
+                        <li class="nav-item lang pl"><a href="#role">Wybierz swoją rolę</a></li>
                     </ul>
                 </nav>
-                <div class="lang">
-                    <img class="flag" src="./assets/img/united kingdom.svg" alt="en-flag">
-                    <img class="flag" src="./assets/img/poland.svg" alt="pl-flag">
+                <div class="language-selector">
+                    <button class="lang-button lang pl" data-lang="en">EN</button>
+                    <button class="lang-button lang en" data-lang="pl">PL</button>
                 </div>
             </div>
         </header>
         <main>
             <section class="section hero">
                 <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/field.mp4" type="video/mp4" /></video>
-                <div class="title">
-                    <h1>Your Next Soccer Game, Just a Few Taps Away</h1>
-                    <h3>Soccer Where You Are: Find Local Matches That Fit Your Schedule</h3>
-                    <div class="store">
-
-                    </div>
+                <div class="hero-content">
+                    <h1 class="hero-title lang en">Your Next Soccer Game, Just a Few Taps Away</h1>
+                    <h1 class="hero-title lang pl">Twój następny mecz piłki nożnej w zasięgu kilku kliknięć</h1>
+                    <p class="hero-text lang en">Soccer Where You Are: Find Local Matches That Fit Your Schedule</p>
+                    <p class="hero-text lang pl">Piłka nożna, gdzie jesteś: znajdź lokalne mecze, które pasują do Twojego harmonogramu</p>
                 </div>
-                <div class="image">
+                <div >
                     <img id="heroImage" src="./assets/img/PHONE.png" alt="Soccer Image" class="hero-image">
                 </div>
             </section>
             <section id="about" class="section about">
-                <h3>What is Playball?</h3>
-
+                <h3 class="about-title lang en">What is Playball?</h3>
+                <h3 class="about-title lang pl">Co to jest Playball?</h3>
+                <p class="about-text lang en">Playball is an app where we get together to play soccer. Our goal is to bring Players and Organizers together and help them to meet on the soccer field. Anyone with even a little bit of kicking a moving ball skills or who wants to organize a game – is welcome.</p>
+                <p class="about-text lang pl">Playball to aplikacja, w której spotykamy się, aby grać w piłkę nożną. Naszym celem jest zjednoczenie zawodników i organizatorów oraz pomoc w ich spotkaniu na boisku piłkarskim. Zapraszamy wszystkich, którzy mają choć trochę umiejętności kopania piłkę lub chcą zorganizować mecz.</p>
             </section>
             <section id="role" class="section role">
-
+                <div class="role-selector">
+                    <button class="role-button player lang en" data-role="player">Player</button>
+                    <button class="role-button player lang pl" data-role="player">Zawodnik</button>
+                    <button class="role-button org lang en" data-role="org">Organizer</button>
+                    <button class="role-button org lang pl" data-role="org">Organizator</button>
+                </div>
+                <div class="role-content player">
+                    <p class="role-text lang en">Player`s content</p>
+                    <p class="role-text lang pl">Zawartość odtwarzacza</p>
+                </div>
+                <div class="role-content org">
+                    <p class="role-text lang en">Organizer`s content</p>
+                    <p class="role-text lang pl">Treść organizatora</p>
+                </div>
             </section>
             <section class="section banner">
-                <p>It’s time for you to try</p>
+                <h3 class="banner-title lang en">It’s time for you to try</h3>
+                <h3 class="banner-title lang pl">Nadszedł czas, abyś spróbował</h3>
                 <img src="./assets/img/banner-logo.png" alt="banner-logo" class="banner-logo">
                 <a href="https://apps.apple.com/us/app/playball-world/id1670142730" target="_blank">
                     <img src="./assets/img/image 140.png" alt="ios-link" class="banner-link">
@@ -67,14 +84,18 @@
         </main>
         <footer class="footer">
             <div class="footer-block">
-                <h3 class="contacts-title">Contact us:</h3>
-                <div><a href="mailto:support@playball.world">support@playball.world</a></div>
-                <div><a href="tel:+209-215-5723">209-215-5723</a></div>
+                <a class="link lang en" href="https://hammerhead-bear-ad6.notion.site/Playball-Onboarding-1-2c2367fb6bec40289dbcd0ea0ed01c14" target="_blank">
+                    Documents
+                </a>
+                <a class="link lang pl" href="https://hammerhead-bear-ad6.notion.site/Playball-Onboarding-1-2c2367fb6bec40289dbcd0ea0ed01c14" target="_blank">
+                    Dokumenty
+                </a>
             </div>
             <div class="footer-block right">
-                <a href="https://hammerhead-bear-ad6.notion.site/Playball-Onboarding-1-2c2367fb6bec40289dbcd0ea0ed01c14" target="_blank">
-                    Documents   🔗
-                </a>
+                <h3 class="contacts-title lang en">Contacts:</h3>
+                <h3 class="contacts-title lang pl">Kontakty:</h3>
+                <div><a href="mailto:support@playball.world">support@playball.world</a></div>
+                <div><a href="tel:+209-215-5723">209-215-5723</a></div>
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

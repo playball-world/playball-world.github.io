@@ -14,13 +14,12 @@ body {
   margin: 0;
   padding: 0;
 }
-
+/* HEADER */
 .header {
   display: flex;
-  /* height: 50px; */
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px;
   background: linear-gradient(to bottom right, #D9D9D9, #005631);
 }
 .logo {
@@ -39,8 +38,7 @@ body {
 }
 .menu {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 .menu img {
   margin-left: auto;
@@ -56,8 +54,9 @@ body {
   padding: 0;
 }
 .nav-item {
-  margin-bottom: 10px;
   text-align: end;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .nav-item a {
   text-decoration: none;
@@ -68,32 +67,59 @@ body {
   color: #D9D9D9;
 }
 .lang {
-  display: flex;
-  height: 25px;
+  display: none;
 }
-.flag{
-  margin-right: 5px;
-  margin-left: 15px;
+.lang.en {
+  display: block;
 }
+.lang-active .lang.pl {
+  display: block;
+}
+
+.lang-active .lang.en {
+  display: none;
+}
+
+.language-selector {
+  margin-left: 20px;
+}
+.lang-button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #005631;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.lang-button:hover {
+  background-color: #004a28;
+}
+
+/* MAIN CONTENT */
 main {
-  /* flex-grow: 1;
-  overflow-y: auto; */
   padding: 20px;
   background-color: #fafafa;
   margin: 0;
   padding: 0;
 }
-
 .section {
   background-color: #fff;
   padding: 10px;
-  border: solid 1px red;
   text-align: center;
 }
+
+/* HERO SECTION */
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   overflow: hidden;
-  /* background: linear-gradient(to bottom, #014722, #07643C); */
+  background-color: transparent;
 }
 .bg-video {
   position: absolute;
@@ -102,30 +128,29 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: 0;
+  filter: blur(2px);
 }
-.title, .image {
-  position: relative; /* Щоб контент був зверху відео */
+.hero-content, .hero-image {
+  position: relative;
   z-index: 1;
-  color: white; /* Контент буде білим, щоб добре виглядати на відео */
-}
-.hero div {
-  /* width: 50%; */
+  color: white;
   text-align: center;
 }
-.title h1 {
+.hero-image{
+  margin-top: 50px;
+}
+.hero-title{
+  color: green;
   font-family: Exo 2;
   font-size: 34px;
   font-weight: 600;
-  line-height: 67.2px;
-  color: white;
 }
-.title h3 {
+.hero-text{
+  color: green;
   font-family: Exo 2;
   font-size: 20px;
-  font-weight: 600;
-  line-height: 38.4px;
-  color: white;
+  font-weight: 400;
 }
 .hero-image {
   border-radius: 50px;
@@ -133,17 +158,85 @@ main {
   max-width: 300px;
   height: auto;
 }
+
+/* ABOUT SECTION */
+.about {
+  padding: 20px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00421D, #07643C);
+}
+.about-title{
+  color: white;
+  font-family: Exo 2;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 38.4px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.about-text{
+  color: white;
+  font-family: Exo 2;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 38.4px;
+}
+/* ROLE SECTION */
+.role {
+  height: 100vh;
+  background-image: url('../assets/img/soccer-field.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden
+}
+.role-selector{
+  display: flex;  
+}
+.role-button{
+  width: calc(50% - 10px);
+  height: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  font-family: Exo 2;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 38.4px;
+  background: linear-gradient(to bottom, #989898, #013a22);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+}
+.role-button:hover{
+  background: linear-gradient(to top, #989898, #01160d06);
+}
+.role-content {
+  display: none;
+  padding: 50px;
+  margin-top: 50px;
+  height: calc(100vh - 300px);
+  background: linear-gradient(to top, #989898, #013a22);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+}
+.role-content.active{
+  display: block;  
+}
+.role-text{
+  color: white;
+}
+/* BANNER SECTION */
 .banner {
-  background: linear-gradient(to top, #014722, #07643C);
+  background: linear-gradient(to top, #00421D, #07643C);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.banner p{
+.banner-title{
   font-family: Exo 2;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 400;
   line-height: 38.4px;
   color: white;
 }
@@ -159,6 +252,17 @@ main {
   background-color: black;
   padding: 20px;
   color: #fff;
+}
+.link::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('../assets/img/link.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 8px;
+  filter: invert(1);
 }
 .footer-block{
   width: 50%;
