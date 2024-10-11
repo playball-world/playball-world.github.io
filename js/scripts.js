@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             
             buttons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-            
+
             contents.forEach(content => {
                 content.classList.remove('active');
             });
@@ -38,3 +38,35 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('name').value;
+
+    document.getElementById('loader').style.display = 'block';
+    document.getElementById('response').innerHTML = ''; 
+
+    try {
+      const response = await fetch('https://api.playball-qa.fun/admin/contactUs', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email, data: `${message} write: I want to be organizer` })
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        document.getElementById('response').innerHTML = `<p>${result.status}: Email sent successfully!</p>`;
+      } else {
+        document.getElementById('response').innerHTML = `<p>Error: ${result.message}</p>`;
+      }
+    } catch (error) {
+      document.getElementById('response').innerHTML = `<p>Error: Unable to send email.</p>`;
+    } finally {
+        document.getElementById('loader').style.display = 'none';
+    }
+  });

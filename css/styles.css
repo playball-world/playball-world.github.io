@@ -6,8 +6,12 @@ html, body, h1, h3, ul, ol {
 h1, h2, h3, p, a {
   color: white
 }
+ul {
+  list-style: none;
+}
 a {
   text-decoration: none;
+  display: inline-block;
 }
 body {
   display: flex;
@@ -15,6 +19,22 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+}
+.main-title{
+  font-family: "Exo 2", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+}
+.title{
+  font-family: "Exo 2", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+.text{
+  font-family: "Exo 2", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
 }
 /* HEADER */
 .header {
@@ -30,22 +50,26 @@ body {
   margin-right: 10px;
   margin-left: 10px;
 }
-.nav {
-  display: flex;
-  margin-left: auto;
-  padding-right: 10px;
+
+@media (max-width: 767px) {
+  .nav {
+    margin-left: auto;
+    padding-right: 10px;
+  }
 }
-.nav-list {
-  list-style: none;
+@media (min-width: 768px) {
+  .nav-list {
+    display: flex;
+  }
+  .nav-item {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
 }
+
 .nav-item {
   text-align: end;
-  margin-top: 5px;
   margin-bottom: 5px;
-}
-.nav-item a {
-  text-decoration: none;
-  font-size: 16px;
 }
 .nav-item a:hover {
   color: #D9D9D9;
@@ -101,28 +125,56 @@ main {
 .hero {
   background: linear-gradient(to top left, #07643C, #00421D);
 }
-.hero-content, .hero-image {
-  text-align: center;
-}
-.hero-image{
-  margin-top: 50px;
-}
-.hero-title{
-  font-family: "Exo 2", sans-serif;
-  font-size: 34px;
-  font-weight: 600;
-}
-.hero-text{
-  font-family: "Exo 2", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-}
 .hero-image {
   border-radius: 50px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
   max-width: 300px;
   height: auto;
 }
+.hero-link-block {
+  display: flex;
+  align-items: center;
+}
+.hero-stores{
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+}
+.hero-link{
+  height: 65px;
+}
+.hero-code{
+  height: 134px;
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-bottom: 4px;
+}
+@media (max-width: 1023px) {
+  .hero-content, .hero-image {
+    text-align: center;
+  }
+  .hero-image{
+    margin-top: 50px;
+  }
+  .hero-link-block {
+    display: none;
+  }
+  .hero-code {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .hero{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 20px;
+  }
+  .hero-content{
+    margin-top: 200px;
+    padding: 30px;
+  }
+}
+
 
 /* ABOUT SECTION */
 .about {
@@ -130,35 +182,15 @@ main {
   height: 100vh;
   background: linear-gradient(to top left, #181313, #2C2727);
 }
-.about-title{
-  font-family: "Exo 2", sans-serif;
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 38.4px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.about-text{
-  font-family: "Exo 2", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 38.4px;
-}
 /* ROLE SECTION */
 .role {
   background: linear-gradient(to top left, #07643C, #00421D);
 }
-.role-title{
-  font-family: "Exo 2", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 38.4px;
-  margin-bottom: 20px;
-}
 .role-selector{
-  display: flex;  
+  display: flex;
+  margin-top: 30px; 
 }
-.role-button{
+.button{
   width: calc(50% - 10px);
   height: 50px;
   margin-left: 5px;
@@ -172,10 +204,10 @@ main {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
-.role-button:hover{
+.button:hover{
   background: linear-gradient(to bottom, #524c4c, #1b1919);
 }
-.role-button.active{
+.button.active{
   background: linear-gradient(to bottom, #524c4c, #1b1919);
 }
 .role-content {
@@ -187,6 +219,19 @@ main {
 .role-content.active{
   display: block;  
 }
+@media (min-width: 1024px) {
+  .role-block {
+    display: flex;
+  }
+  .role-selector {
+    flex-direction: column;
+    width: 20%;
+  }
+  .button {
+    width: calc(100% - 20px);
+    margin-top: 30px;
+  }
+}
 
 /* ROLE - PLAYER */
 .role-content{
@@ -194,6 +239,37 @@ main {
 }
 /* ROLE - ORGANIZER */
 
+.contact-form{
+  margin-top: 50px;
+}
+.form-input {
+  border: none;
+  border-bottom: 2px solid #181313;
+  padding: 8px 0;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background-color: transparent;
+  color: white;
+}
+.form-input:focus {
+  border-bottom: 2px solid #5E5959;
+}
+.loader {
+  border: 5px solid #5E5959;
+  border-top: 5px solid #013921;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 30px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 /* BANNER SECTION */
 .banner {
   background: linear-gradient(to bottom left, #181313, #5E5959);
@@ -202,18 +278,27 @@ main {
   flex-direction: column;
   align-items: center;
 }
-.banner-title{
-  font-family: "Exo 2", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 38.4px;
-}
 .banner-logo{
   width: 70%;
 }
 .banner-link {
   margin-top: 20px;
 }
+@media(min-width: 767px) {
+  .banner-logo {
+    width: 200px;
+  }
+  .banner-stores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* FOOTER */
 .footer {
   display: flex;
   justify-content: baseline;

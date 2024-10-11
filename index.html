@@ -20,10 +20,10 @@
             </div>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-item lang en"><a href="#about">What is Playball</a></li>
-                    <li class="nav-item lang pl"><a href="#about">Co to jest Playball</a></li>
-                    <li class="nav-item lang en"><a href="#role">Choose your role</a></li>
-                    <li class="nav-item lang pl"><a href="#role">Wybierz swoją rolę</a></li>
+                    <li class="nav-item text lang en"><a href="#about">What is Playball</a></li>
+                    <li class="nav-item text lang pl"><a href="#about">Co to jest Playball</a></li>
+                    <li class="nav-item text lang en"><a href="#role">Choose your role</a></li>
+                    <li class="nav-item text lang pl"><a href="#role">Wybierz swoją rolę</a></li>
                 </ul>
             </nav>
             <div class="language-selector">
@@ -35,66 +35,97 @@
         <main>
             <section class="section hero">
                 <div class="hero-content">
-                    <h1 class="hero-title lang en">Your Next Soccer Game, Just a Few Taps Away</h1>
-                    <h1 class="hero-title lang pl">Twój następny mecz piłki nożnej w zasięgu kilku kliknięć</h1>
-                    <p class="hero-text lang en">Soccer Where You Are: Find Local Matches That Fit Your Schedule</p>
-                    <p class="hero-text lang pl">Piłka nożna, gdzie jesteś: znajdź lokalne mecze, które pasują do Twojego harmonogramu</p>
+                    <h1 class="main-title lang en">Your Next Soccer Game, Just a Few Taps Away</h1>
+                    <h1 class="main-title lang pl">Twój następny mecz piłki nożnej w zasięgu kilku kliknięć</h1>
+                    <p class="title lang en">Soccer Where You Are: Find Local Matches That Fit Your Schedule</p>
+                    <p class="title lang pl">Piłka nożna, gdzie jesteś: znajdź lokalne mecze, które pasują do Twojego harmonogramu</p>
+                    <div class="hero-link-block">
+                        <div class="hero-stores">
+                            <a href="https://apps.apple.com/us/app/playball-world/id1670142730" target="_blank">
+                                <img src="./assets/img/image 140.png" alt="ios-link" class="hero-link">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.playball.world" target="_blank">
+                                <img src="./assets/img/image 141.png" alt="google-link" class="hero-link">
+                            </a>
+                        </div>
+                        <img src="./assets/img/qr-code.jpeg" alt="qr-code" class="hero-code">
+                    </div>
                 </div>
                 <div >
                     <img id="heroImage" src="./assets/img/PHONE.png" alt="Soccer Image" class="hero-image">
                 </div>
             </section>
             <section id="about" class="section about">
-                <h3 class="about-title lang en">What is Playball?</h3>
-                <h3 class="about-title lang pl">Co to jest Playball?</h3>
-                <p class="about-text lang en">Playball is an app where we get together to play soccer. Our goal is to bring Players and Organizers together and help them to meet on the soccer field. Anyone with even a little bit of kicking a moving ball skills or who wants to organize a game – is welcome.</p>
-                <p class="about-text lang pl">Playball to aplikacja, w której spotykamy się, aby grać w piłkę nożną. Naszym celem jest zjednoczenie zawodników i organizatorów oraz pomoc w ich spotkaniu na boisku piłkarskim. Zapraszamy wszystkich, którzy mają choć trochę umiejętności kopania piłkę lub chcą zorganizować mecz.</p>
+                <h3 class="main-title lang en">What is Playball?</h3>
+                <h3 class="main-title lang pl">Co to jest Playball?</h3>
+                <p class="text lang en">Playball is an app where we get together to play soccer. Our goal is to bring Players and Organizers together and help them to meet on the soccer field. Anyone with even a little bit of kicking a moving ball skills or who wants to organize a game – is welcome.</p>
+                <p class="text lang pl">Playball to aplikacja, w której spotykamy się, aby grać w piłkę nożną. Naszym celem jest zjednoczenie zawodników i organizatorów oraz pomoc w ich spotkaniu na boisku piłkarskim. Zapraszamy wszystkich, którzy mają choć trochę umiejętności kopania piłkę lub chcą zorganizować mecz.</p>
             </section>
             <section id="role" class="section role">
-                <h3 class="role-title lang en">Choose your role</h3>
-                <h3 class="role-title lang pl">Wybierz swoją rolę</h3>
-                <div class="role-selector">
-                    <button class="role-button player active lang en" data-role="player">Player</button>
-                    <button class="role-button player active lang pl" data-role="player">Zawodnik</button>
-                    <button class="role-button org lang en" data-role="org">Organizer</button>
-                    <button class="role-button org lang pl" data-role="org">Organizator</button>
-                </div>
-                <div class="role-content player active">
-                    <ul class="player-content">
-                        <li class="player-item lang en">
-                            <p class="player-text">1. Download the app, sign up</p>
-                        </li>
-                        <li class="player-item lang pl">
-                            <p class="player-text">1. Pobierz aplikację, zarejestruj się</p>
-                        </li>
-                        <li class="player-item lang en">
-                            <p class="player-text">2. Select the match, pay for it</p>
-                        </li>
-                        <li class="player-item lang pl">
-                            <p class="player-text">2. Wybierz dopasowanie, zapłać za nie</p>
-                        </li>
-                        <li class="player-item lang en">
-                            <p class="player-text">3. Come to play!</p>
-                        </li>
-                        <li class="player-item lang pl">
-                            <p class="player-text">3. Przyjdź zagrać!</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="role-content org">
+                <h3 class="main-title lang en">Choose your role</h3>
+                <h3 class="main-title lang pl">Wybierz swoją rolę</h3>
+                <div class="role-block">
+                    <div class="role-selector">
+                        <button class="role-button button player active lang en" data-role="player">Player</button>
+                        <button class="role-button button player active lang pl" data-role="player">Zawodnik</button>
+                        <button class="role-button button org lang en" data-role="org">Organizer</button>
+                        <button class="role-button button org lang pl" data-role="org">Organizator</button>
+                    </div>
+                    <div class="role-content player active">
+                        <ul class="player-content">
+                            <li class="player-item lang en">
+                                <p class="text">1. Download the app, sign up</p>
+                            </li>
+                            <li class="player-item lang pl">
+                                <p class="text">1. Pobierz aplikację, zarejestruj się</p>
+                            </li>
+                            <li class="player-item lang en">
+                                <p class="text">2. Select the match, pay for it</p>
+                            </li>
+                            <li class="player-item lang pl">
+                                <p class="text">2. Wybierz dopasowanie, zapłać za nie</p>
+                            </li>
+                            <li class="player-item lang en">
+                                <p class="text">3. Come to play!</p>
+                            </li>
+                            <li class="player-item lang pl">
+                                <p class="text">3. Przyjdź zagrać!</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="role-content org">
+                        <h3 class="title lang en">Send your email and name, we contact you!</h3>
+                        <h3 class="title lang pl">Wyślij swój adres e-mail i imię, skontaktujemy się z Tobą!</h3>
+                        <form id="contact-form" class="contact-form">
+                            <label class="text lang en" for="email">Email:</label><br>
+                            <label class="text lang pl" for="email">E-mail:</label><br>
+                            <input type="email" id="email" name="email" required class="form-input"><br><br>
+                            <label class="text lang en" for="name">Name:</label><br>
+                            <label class="text lang pl" for="name">Imię:</label><br>
+                            <input type="text" id="name" name="name" required class="form-input"><br><br>
+                            <button type="submit" class="button lang en">Send</button>
+                            <button type="submit" class="button lang pl">Wysłać</button>
+                        </form>
+                        <div id="loader" class="loader" style="display: none;"></div>
+                        <div id="response" class="text"></div>
+                    </div>
                 </div>
             </section>
             <section class="section banner">
-                <h3 class="banner-title lang en">It’s time for you to try</h3>
-                <h3 class="banner-title lang pl">Nadszedł czas, abyś spróbował</h3>
-                <img src="./assets/img/banner-logo.png" alt="banner-logo" class="banner-logo">
-                <a href="https://apps.apple.com/us/app/playball-world/id1670142730" target="_blank">
-                    <img src="./assets/img/image 140.png" alt="ios-link" class="banner-link">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.playball.world" target="_blank">
-                    <img src="./assets/img/image 141.png" alt="google-link" class="banner-link">
-                </a>
-
+                <h3 class="main-title lang en">It’s time for you to try</h3>
+                <h3 class="main-title lang pl">Nadszedł czas, abyś spróbował</h3>
+                <div class="banner-stores">
+                    <img src="./assets/img/banner-logo.png" alt="banner-logo" class="banner-logo">
+                    <div class="banner-links">
+                        <a href="https://apps.apple.com/us/app/playball-world/id1670142730" target="_blank">
+                            <img src="./assets/img/image 140.png" alt="ios-link" class="banner-link">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.playball.world" target="_blank">
+                            <img src="./assets/img/image 141.png" alt="google-link" class="banner-link">
+                        </a>
+                    </div>
+                    <img src="./assets/img/qr-code.jpeg" alt="qr-code" class="hero-code">
+                </div>
             </section>
         </main>
         <footer class="footer">
