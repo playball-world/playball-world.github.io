@@ -5,86 +5,145 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Coming Soon - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
+        <title>Playball</title>
+        <link rel="icon" type="image/x-icon" href="assets/icon.png" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <!-- Background Video-->
-        <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
-        <!-- Masthead-->
-        <div class="masthead">
-            <div class="masthead-content text-white">
-                <div class="container-fluid px-4 px-lg-0">
-                    <h1 class="fst-italic lh-1 mb-4">Playball is Coming Soon</h1>
-                    <p class="mb-5">We're working hard to finish the development of this site. Sign up below to receive updates and to be notified when we launch!</p>
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <!-- Email address input-->
-                        <div class="row input-group-newsletter">
-                            <div class="col"><input class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                            <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+        <header class="header">
+            <div class="logo">
+                <img src="./assets/img/logo.png" alt="Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item text lang en"><a href="#about">What is Playball</a></li>
+                    <li class="nav-item text lang pl"><a href="#about">Co to jest Playball</a></li>
+                    <li class="nav-item text lang en"><a href="#role">Choose your role</a></li>
+                    <li class="nav-item text lang pl"><a href="#role">Wybierz swoją rolę</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <button class="lang-button active" data-lang="en">EN</button>
+                <div class="liner"></div>
+                <button class="lang-button" data-lang="pl">PL</button>
+            </div>
+        </header>
+        <main>
+            <section class="section hero">
+                <div class="hero-content">
+                    <h1 class="main-title lang en">Your Next Soccer Game, Just a Few Taps Away</h1>
+                    <h1 class="main-title lang pl">Twój następny mecz piłki nożnej w zasięgu kilku kliknięć</h1>
+                    <p class="title lang en">Soccer Where You Are: Find Local Matches That Fit Your Schedule</p>
+                    <p class="title lang pl">Piłka nożna, gdzie jesteś: znajdź lokalne mecze, które pasują do Twojego harmonogramu</p>
+                    <div class="hero-link-block">
+                        <div class="hero-stores">
+                            <a href="https://apps.apple.com/us/app/playball-world/id1670142730" target="_blank">
+                                <img src="./assets/img/image 140.png" alt="ios-link" class="hero-link">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.playball.world" target="_blank">
+                                <img src="./assets/img/image 141.png" alt="google-link" class="hero-link">
+                            </a>
                         </div>
-                        <div class="invalid-feedback mt-2" data-sb-feedback="email:required">An email is required.</div>
-                        <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3 mt-2">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                <!-- To activate this form, sign up at -->
-                                <!-- <br /> -->
-                                <!-- <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a> -->
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-                    </form>
-                    <p class="mt-4">Contacts:</p>
-                    <div>
-                        <a class="text-light" href="mailto:support@playball.world">support@playball.world</a>
-                    </div>
-                    <div>
-                        <a class="text-light" href="tel:209-215-5723">209-215-5723</a>
+                        <img src="./assets/img/qr-code.jpeg" alt="qr-code" class="hero-code">
                     </div>
                 </div>
+                <div >
+                    <img id="heroImage" src="./assets/img/PHONE.png" alt="Soccer Image" class="hero-image">
+                </div>
+            </section>
+            <section id="about" class="section about">
+                <h3 class="main-title lang en">What is Playball?</h3>
+                <h3 class="main-title lang pl">Co to jest Playball?</h3>
+                <p class="text lang en">Playball is an app where we get together to play soccer. Our goal is to bring Players and Organizers together and help them to meet on the soccer field. Anyone with even a little bit of kicking a moving ball skills or who wants to organize a game – is welcome.</p>
+                <p class="text lang pl">Playball to aplikacja, w której spotykamy się, aby grać w piłkę nożną. Naszym celem jest zjednoczenie zawodników i organizatorów oraz pomoc w ich spotkaniu na boisku piłkarskim. Zapraszamy wszystkich, którzy mają choć trochę umiejętności kopania piłkę lub chcą zorganizować mecz.</p>
+            </section>
+            <section id="role" class="section role">
+                <h3 class="main-title lang en">Choose your role</h3>
+                <h3 class="main-title lang pl">Wybierz swoją rolę</h3>
+                <div class="role-block">
+                    <div class="role-selector">
+                        <button class="role-button button player active lang en" data-role="player">Player</button>
+                        <button class="role-button button player active lang pl" data-role="player">Zawodnik</button>
+                        <button class="role-button button org lang en" data-role="org">Organizer</button>
+                        <button class="role-button button org lang pl" data-role="org">Organizator</button>
+                    </div>
+                    <div class="role-content player active">
+                        <ul class="player-content">
+                            <li class="player-item lang en">
+                                <p class="text">1. Download the app, sign up</p>
+                            </li>
+                            <li class="player-item lang pl">
+                                <p class="text">1. Pobierz aplikację, zarejestruj się</p>
+                            </li>
+                            <li class="player-item lang en">
+                                <p class="text">2. Select the match, pay for it</p>
+                            </li>
+                            <li class="player-item lang pl">
+                                <p class="text">2. Wybierz dopasowanie, zapłać za nie</p>
+                            </li>
+                            <li class="player-item lang en">
+                                <p class="text">3. Come to play!</p>
+                            </li>
+                            <li class="player-item lang pl">
+                                <p class="text">3. Przyjdź zagrać!</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="role-content org">
+                        <h3 class="title lang en">Send your email and name, we contact you!</h3>
+                        <h3 class="title lang pl">Wyślij swój adres e-mail i imię, skontaktujemy się z Tobą!</h3>
+                        <form id="contact-form" class="contact-form">
+                            <label class="text lang en" for="email">Email:</label><br>
+                            <label class="text lang pl" for="email">E-mail:</label><br>
+                            <input type="email" id="email" name="email" required class="form-input"><br><br>
+                            <label class="text lang en" for="name">Name:</label><br>
+                            <label class="text lang pl" for="name">Imię:</label><br>
+                            <input type="text" id="name" name="name" required class="form-input"><br><br>
+                            <button type="submit" class="button lang en">Send</button>
+                            <button type="submit" class="button lang pl">Wysłać</button>
+                        </form>
+                        <div id="loader" class="loader" style="display: none;"></div>
+                        <div id="response" class="text"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section banner">
+                <h3 class="main-title lang en">It’s time for you to try</h3>
+                <h3 class="main-title lang pl">Nadszedł czas, abyś spróbował</h3>
+                <div class="banner-stores">
+                    <img src="./assets/img/banner-logo.png" alt="banner-logo" class="banner-logo">
+                    <div class="banner-links">
+                        <a href="https://apps.apple.com/us/app/playball-world/id1670142730" target="_blank">
+                            <img src="./assets/img/image 140.png" alt="ios-link" class="banner-link">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.playball.world" target="_blank">
+                            <img src="./assets/img/image 141.png" alt="google-link" class="banner-link">
+                        </a>
+                    </div>
+                    <img src="./assets/img/qr-code.jpeg" alt="qr-code" class="hero-code">
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-block">
+                <a class="link lang en" href="https://hammerhead-bear-ad6.notion.site/Playball-Onboarding-1-2c2367fb6bec40289dbcd0ea0ed01c14" target="_blank">
+                    Documents
+                </a>
+                <a class="link lang pl" href="https://hammerhead-bear-ad6.notion.site/Playball-Onboarding-1-2c2367fb6bec40289dbcd0ea0ed01c14" target="_blank">
+                    Dokumenty
+                </a>
             </div>
-        </div>
-        <!-- Social Icons-->
-        <!-- For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands-->
-        <div class="social-icons">
-            <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
-                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram"></i></a>
+            <div class="footer-block right">
+                <div><a href="mailto:support@playball.world">support@playball.world</a></div>
+                <div><a href="tel:+209-215-5723">209-215-5723</a></div>
             </div>
-        </div>
-        <!-- Bootstrap core JS-->
+        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
