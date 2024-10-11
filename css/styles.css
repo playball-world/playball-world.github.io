@@ -1,11 +1,13 @@
-html, body, h1, h3 {
+html, body, h1, h3, ul, ol {
   margin: 0;
   padding: 0; 
   scroll-behavior: smooth;
 }
+h1, h2, h3, p, a {
+  color: white
+}
 a {
   text-decoration: none;
-  color: #fff;
 }
 body {
   display: flex;
@@ -20,38 +22,21 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background: linear-gradient(to bottom right, #D9D9D9, #005631);
-}
-.logo {
-  display: flex;
-  align-items: center; 
+  background-color: #2C2727;
 }
 .logo-img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin-right: 10px;
-}
-.logo-name {
-  font-size: 20px;
-  font-weight: bold;
-  color: #005631;
-}
-.menu {
-  display: flex;
-  align-items: center;
-}
-.menu img {
-  margin-left: auto;
+  margin-left: 10px;
 }
 .nav {
   display: flex;
-  align-items: flex-end;
-  width: 100%; 
+  margin-left: auto;
+  padding-right: 10px;
 }
 .nav-list {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 .nav-item {
   text-align: end;
@@ -60,7 +45,6 @@ body {
 }
 .nav-item a {
   text-decoration: none;
-  color: #005631;
   font-size: 16px;
 }
 .nav-item a:hover {
@@ -81,20 +65,24 @@ body {
 }
 
 .language-selector {
-  margin-left: 20px;
+  display: flex;
 }
 .lang-button {
   margin: 5px;
-  padding: 10px;
-  background-color: #005631;
-  color: white;
+  background-color: transparent;
+  color: #5E5959;
+  font-family: "Exo 2", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
   border: none;
   cursor: pointer;
   border-radius: 10px;
 }
-
-.lang-button:hover {
-  background-color: #004a28;
+.lang-button.active{
+  color: white;
+}
+.liner{
+  border-left: solid 2px white;
 }
 
 /* MAIN CONTENT */
@@ -105,50 +93,27 @@ main {
   padding: 0;
 }
 .section {
-  background-color: #fff;
   padding: 10px;
   text-align: center;
 }
 
 /* HERO SECTION */
 .hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-  background-color: transparent;
-}
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  filter: blur(2px);
+  background: linear-gradient(to top left, #07643C, #00421D);
 }
 .hero-content, .hero-image {
-  position: relative;
-  z-index: 1;
-  color: white;
   text-align: center;
 }
 .hero-image{
   margin-top: 50px;
 }
 .hero-title{
-  color: green;
-  font-family: Exo 2;
+  font-family: "Exo 2", sans-serif;
   font-size: 34px;
   font-weight: 600;
 }
 .hero-text{
-  color: green;
-  font-family: Exo 2;
+  font-family: "Exo 2", sans-serif;
   font-size: 20px;
   font-weight: 400;
 }
@@ -163,11 +128,10 @@ main {
 .about {
   padding: 20px;
   height: 100vh;
-  background: linear-gradient(to bottom, #00421D, #07643C);
+  background: linear-gradient(to top left, #181313, #2C2727);
 }
 .about-title{
-  color: white;
-  font-family: Exo 2;
+  font-family: "Exo 2", sans-serif;
   font-size: 28px;
   font-weight: 300;
   line-height: 38.4px;
@@ -175,19 +139,21 @@ main {
   margin-bottom: 50px;
 }
 .about-text{
-  color: white;
-  font-family: Exo 2;
+  font-family: "Exo 2", sans-serif;
   font-size: 20px;
   font-weight: 300;
   line-height: 38.4px;
 }
 /* ROLE SECTION */
 .role {
-  height: 100vh;
-  background-image: url('../assets/img/soccer-field.jpg');
-  background-size: cover;
-  background-position: center;
-  overflow: hidden
+  background: linear-gradient(to top left, #07643C, #00421D);
+}
+.role-title{
+  font-family: "Exo 2", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 38.4px;
+  margin-bottom: 20px;
 }
 .role-selector{
   display: flex;  
@@ -198,47 +164,49 @@ main {
   margin-left: 5px;
   margin-right: 5px;
   color: white;
-  font-family: Exo 2;
+  font-family: "Exo 2", sans-serif;
   font-size: 20px;
   font-weight: 300;
-  line-height: 38.4px;
-  background: linear-gradient(to bottom, #989898, #013a22);
+  background: linear-gradient(to top, #181313, #2C2727);
   border: none;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 .role-button:hover{
-  background: linear-gradient(to top, #989898, #01160d06);
+  background: linear-gradient(to bottom, #524c4c, #1b1919);
+}
+.role-button.active{
+  background: linear-gradient(to bottom, #524c4c, #1b1919);
 }
 .role-content {
   display: none;
   padding: 50px;
   margin-top: 50px;
   height: calc(100vh - 300px);
-  background: linear-gradient(to top, #989898, #013a22);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
 }
 .role-content.active{
   display: block;  
 }
-.role-text{
-  color: white;
+
+/* ROLE - PLAYER */
+.role-content{
+  text-align: left;
 }
+/* ROLE - ORGANIZER */
+
 /* BANNER SECTION */
 .banner {
-  background: linear-gradient(to top, #00421D, #07643C);
+  background: linear-gradient(to bottom left, #181313, #5E5959);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 .banner-title{
-  font-family: Exo 2;
+  font-family: "Exo 2", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 38.4px;
-  color: white;
 }
 .banner-logo{
   width: 70%;
@@ -251,7 +219,6 @@ main {
   justify-content: baseline;
   background-color: black;
   padding: 20px;
-  color: #fff;
 }
 .link::after {
   content: "";

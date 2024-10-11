@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () {
             const selectedLang = this.getAttribute('data-lang');
 
+            buttons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
             if (selectedLang === 'pl') {
                 document.body.classList.add('lang-active'); 
             } else {
@@ -20,6 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
     buttons.forEach(button => {
         button.addEventListener('click', function() {
             const role = this.getAttribute('data-role'); 
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
             
             contents.forEach(content => {
                 content.classList.remove('active');
