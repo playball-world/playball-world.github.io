@@ -22,22 +22,27 @@ body {
 }
 .main-title{
   font-family: "Exo 2", sans-serif;
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 600;
 }
 .title{
   font-family: "Exo 2", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
 }
-.text{
+.text, a{
   font-family: "Exo 2", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   color: white;
 }
 /* HEADER */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: #2C2727;
 }
 .header .content {
@@ -94,8 +99,8 @@ body {
   border-left: solid 2px white;
 }
 @media (max-width: 365px) {
-  .nav-item {
-    font-size: 14px;
+  .nav-link {
+    font-size: 12px;
   }
 }
 @media (max-width: 767px) {
@@ -114,67 +119,74 @@ body {
   }
 }
 @media (min-width: 1024px) {
-  .header {
-    padding: 10px 50px;
-  }
   .logo-img {
     width: 70px;
     height: 70px;
     margin-right: 10px;
     margin-left: 10px;
   }
-  .nav-item {
-    margin-right: 30px;
-    margin-left: 30px;
-    font-size: 24px;
+  .nav-link {
+    font-size: 18px;
   }
   .lang-button {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 /* MAIN CONTENT */
 main {
-  padding: 20px;
   background-color: #fafafa;
-  margin: 0;
-  padding: 0;
+  padding-top: 74px;
 }
 .section {
   padding: 10px;
   text-align: center;
+  scroll-margin-top: 74px;
 }
 .content {
   max-width: 1220px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+}
+@media(min-width: 1024px) {
+  main {
+    padding-top: 94px;
+  }
+  .section {
+    scroll-margin-top: 94px;
+  }
 }
 
 /* HERO SECTION */
 .hero {
   background: linear-gradient(to top left, #07643C, #00421D);
 }
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 .hero-image {
-  border-radius: 50px;
+  border-radius: 55px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-  max-width: 300px;
-  height: auto;
+  width: 300px;
 }
 .hero-link-block {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 .hero-stores{
   display: flex;
   flex-direction: column;
-  padding-left: 100px;
 }
 .hero-link{
-  height: 65px;
+  height: 45px;
+  margin-top: 10px;
 }
 .hero-code{
   height: 134px;
-  border-radius: 5px;
+  border-radius: 12px;
+  /* border: solid 2px white; */
   margin-left: 50px;
   margin-bottom: 4px;
 }
@@ -182,27 +194,50 @@ main {
   .hero-content, .hero-image {
     text-align: center;
   }
+  .hero-image-container {
+    display: flex;
+    justify-content: center;
+  }
   .hero-image{
-    margin-top: 50px;
+    margin-top: 0px;
+    width: 230px;
+    border-radius: 40px;
   }
   .hero-link-block {
-    display: none;
+    margin-top: 10px;
   }
   .hero-code {
     display: none;
   }
 }
 @media (min-width: 1024px) {
-  .hero .content{
-    display: flex;
-    justify-content: space-around;
-    padding: 30px 20px;
+  .hero-container {
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto;
+    gap: 20px;
   }
   .hero-content{
-    padding: 30px;
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
   .hero-content h1 {
     margin-top: 100px;
+  }
+  .hero-link-block {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: 50px;
+  }
+  .hero-image-container {
+    grid-column: 2;
+    grid-row: 1 / span 2;
   }
 }
 
@@ -229,7 +264,7 @@ main {
   color: white;
   font-family: "Exo 2", sans-serif;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 600;
   background: linear-gradient(to top, #181313, #2C2727);
   border: none;
   border-radius: 10px;
@@ -269,14 +304,17 @@ main {
   text-align: left;
 }
 /* ROLE - ORGANIZER */
-
+.player-content {
+  margin-bottom: 30px;
+}
 .contact-form{
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .form-input {
   border: none;
   border-bottom: 1px solid #181313;
   padding: 8px 0;
+  margin-bottom: 10px;
   width: 100%;
   outline: none;
   font-size: 16px;
@@ -317,7 +355,7 @@ main {
 }
 .banner-link-block {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 @media(min-width: 767px) {
   .banner-logo {
@@ -362,6 +400,7 @@ main {
 }
 .footer-block{
   width: 50%;
+  text-align: start;
 }
 .right{
   text-align: end;
