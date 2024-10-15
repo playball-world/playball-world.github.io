@@ -54,7 +54,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email: email, data: `${message} write: I want to be organizer` })
+        body: JSON.stringify({ email: email, data: `Name: ${message}. I want to be organizer (Website)` })
       });
 
       const result = await response.json();

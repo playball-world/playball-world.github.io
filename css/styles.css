@@ -186,7 +186,6 @@ main {
 .hero-code{
   height: 134px;
   border-radius: 12px;
-  /* border: solid 2px white; */
   margin-left: 50px;
   margin-bottom: 4px;
 }
@@ -404,4 +403,22 @@ main {
 }
 .right{
   text-align: end;
+}
+.social {
+  display: flex;
+  margin-top: 20px;
+}
+.social-icon{
+  margin-right: 15px;
+  height: 20px;
+  cursor: pointer;
+}
+.social-link:hover .social-icon {
+  filter: brightness(1.5);
+}
+@media(min-width: 1024px) {
+  .social-icon{
+    margin-right: 20px;
+    height: 30px;
+  }
 }
