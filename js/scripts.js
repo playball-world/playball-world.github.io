@@ -42,8 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById('contact-form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('name').value;
+    const emailInput = document.getElementById('email');
+    const nameInput = document.getElementById('name');
+    const email = emailInput.value;
+    const name = nameInput.value;
 
     document.getElementById('loader').style.display = 'block';
     document.getElementById('response').innerHTML = ''; 
@@ -54,15 +56,17 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email: email, data: `Name: ${message}. I want to be organizer (Website)` })
+        body: JSON.stringify({ email: email, data: `Name: ${name}. I want to be organizer (Website)` })
       });
 
       const result = await response.json();
 
       if (response.ok) {
         document.getElementById('response').innerHTML = `<p>${result.status}: Email sent successfully!</p>`;
+        emailInput.value = '';
+        nameInput.value = '';
       } else {
-        document.getElementById('response').innerHTML = `<p>Error: ${result.message}</p>`;
+        document.getElementById('response').innerHTML = `<p>Error: ${result.name}</p>`;
       }
     } catch (error) {
       document.getElementById('response').innerHTML = `<p>Error: Unable to send email.</p>`;
