@@ -134,15 +134,9 @@
                             </ul>
                             <h3 class="text lang en">Send your email and name, we contact you!</h3>
                             <h3 class="text lang pl">Wyślij swój adres e-mail i imię, skontaktujemy się z Tobą!</h3>
-                            <form id="contact-form" class="contact-form">
-                                <!-- <label class="text lang en" for="name">Name:</label>
-                                <label class="text lang pl" for="name">Imię:</label> -->
-                                <input type="text" id="name" name="name" required class="form-input lang en" placeholder="Name">
-                                <input type="text" id="name" name="name" required class="form-input lang pl" placeholder="Imię">
-                                <!-- <label class="text lang en" for="email">Email:</label>
-                                <label class="text lang pl" for="email">E-mail:</label> -->
-                                <input type="email" id="email" name="email" required class="form-input lang en" placeholder="Email">
-                                <input type="email" id="email" name="email" required class="form-input lang pl" placeholder="E-mail">
+                            <form id="contact-form" class="contact-form" data-sb-form-api-token="YOUR_API_TOKEN">
+                                <input type="text" id="name" name="name" required class="form-input" placeholder="Name">
+                                <input type="email" id="email" name="email" required class="form-input" placeholder="Email">
                                 <button type="submit" class="button lang en">Send</button>
                                 <button type="submit" class="button lang pl">Wysłać</button>
                             </form>
@@ -182,7 +176,7 @@
                     </a>
                     <ul class="social">
                         <li class="social-item">
-                            <a href="https://www.instagram.com/" class="social-link" target="_blank">
+                            <a href="https://www.instagram.com/playball.world" class="social-link" target="_blank">
                                 <img src="./assets/img/instagram.svg" alt="instagram" class="social-icon">
                             </a>
                         </li>
