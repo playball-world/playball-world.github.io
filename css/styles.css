@@ -403,6 +403,9 @@ main {
 }
 .right{
   text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .social {
   display: flex;
@@ -410,15 +413,18 @@ main {
 }
 .social-icon{
   margin-right: 15px;
-  height: 20px;
+  height: 35px;
   cursor: pointer;
 }
 .social-link:hover .social-icon {
   filter: brightness(1.5);
 }
+.copyright {
+  text-align: end;
+}
 @media(min-width: 1024px) {
   .social-icon{
     margin-right: 20px;
-    height: 30px;
+    height: 50px;
   }
 }
