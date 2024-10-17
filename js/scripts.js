@@ -48,8 +48,6 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     const name = nameInput.value;
 
     document.getElementById('loader').style.display = 'block';
-    document.getElementById('response-en').innerHTML = ''; 
-    document.getElementById('response-pl').innerHTML = '';
 
     try {
       const response = await fetch('https://api.playball-qa.fun/admin/contactUs', {
