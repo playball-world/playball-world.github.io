@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.getElementById('contact-form').addEventListener('submit', async function(event) {
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('contact-form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
     const emailInput = document.getElementById('email');
@@ -76,3 +77,4 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         document.getElementById('loader').style.display = 'none';
     }
   });
+});
