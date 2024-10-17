@@ -62,17 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
       const result = await response.json();
 
       if (response.ok) {
-        document.getElementById('response-en').innerHTML = `<p>Email sent successfully!</p>`;
-        document.getElementById('response-pl').innerHTML = `<p>E-mail wysłany pomyślnie!</p>`;
+        document.getElementById('enResponse').innerHTML = `<p>Email sent successfully!</p>`;
+        document.getElementById('plResponse').innerHTML = `<p>E-mail wysłany pomyślnie!</p>`;
         emailInput.value = '';
         nameInput.value = '';
       } else {
-        document.getElementById('response-en').innerHTML = `<p>Error: ${result.name}</p>`;
-        document.getElementById('response-pl').innerHTML = `<p>Błąd: ${result.name}</p>`;
+        document.getElementById('enResponse').innerHTML = `<p>Error: ${result.name}</p>`;
+        document.getElementById('plResponse').innerHTML = `<p>Błąd: ${result.name}</p>`;
       }
     } catch (error) {
-      document.getElementById('response-en').innerHTML = `<p>Error: Unable to send email.</p>`;
-      document.getElementById('response-pl').innerHTML = `<p>Błąd: Nie można wysłać e-maila.</p>`;
+      document.getElementById('enResponse').innerHTML = `<p>Error: Unable to send email.</p>`;
+      document.getElementById('plResponse').innerHTML = `<p>Błąd: Nie można wysłać e-maila.</p>`;
     } finally {
         document.getElementById('loader').style.display = 'none';
     }
