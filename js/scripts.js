@@ -62,7 +62,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
       const result = await response.json();
 
       if (response.ok) {
-        document.getElementById('response').innerHTML = `<p>${result.status}: Email sent successfully!</p>`;
+        document.getElementById('response').innerHTML = `<p>Email sent successfully!</p>`;
         emailInput.value = '';
         nameInput.value = '';
       } else {
