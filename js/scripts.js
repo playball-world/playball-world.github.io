@@ -48,7 +48,8 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     const name = nameInput.value;
 
     document.getElementById('loader').style.display = 'block';
-    document.getElementById('response').innerHTML = ''; 
+    document.getElementById('response-en').innerHTML = ''; 
+    document.getElementById('response-pl').innerHTML = '';
 
     try {
       const response = await fetch('https://api.playball-qa.fun/admin/contactUs', {
@@ -62,14 +63,17 @@ document.getElementById('contact-form').addEventListener('submit', async functio
       const result = await response.json();
 
       if (response.ok) {
-        document.getElementById('response').innerHTML = `<p>Email sent successfully!</p>`;
+        document.getElementById('response-en').innerHTML = `<p>Email sent successfully!</p>`;
+        document.getElementById('response-pl').innerHTML = `<p>E-mail wysłany pomyślnie!</p>`;
         emailInput.value = '';
         nameInput.value = '';
       } else {
-        document.getElementById('response').innerHTML = `<p>Error: ${result.name}</p>`;
+        document.getElementById('response-en').innerHTML = `<p>Error: ${result.name}</p>`;
+        document.getElementById('response-pl').innerHTML = `<p>Błąd: ${result.name}</p>`;
       }
     } catch (error) {
-      document.getElementById('response').innerHTML = `<p>Error: Unable to send email.</p>`;
+      document.getElementById('response-en').innerHTML = `<p>Error: Unable to send email.</p>`;
+      document.getElementById('response-pl').innerHTML = `<p>Błąd: Nie można wysłać e-maila.</p>`;
     } finally {
         document.getElementById('loader').style.display = 'none';
     }
