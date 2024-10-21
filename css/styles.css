@@ -279,7 +279,7 @@ main {
 .role-content {
   display: none;
   padding: 30px;
-  min-height: 865px;
+  min-height: calc(100vh - 100px);
 }
 .role-content.active{
   display: block;  
