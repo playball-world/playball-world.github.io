@@ -279,7 +279,7 @@ main {
 .role-content {
   display: none;
   padding: 30px;
-  height: calc(100vh - 300px);
+  min-height: calc(100vh - 300px);
 }
 .role-content.active{
   display: block;  
@@ -340,7 +340,6 @@ main {
 }
 /* BANNER SECTION */
 .banner {
-  /* background: linear-gradient(to bottom left, #181313, #5E5959); */
   display: flex;
   justify-content: center;
   flex-direction: column;
