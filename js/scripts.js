@@ -48,33 +48,42 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = emailInput.value;
     const name = nameInput.value;
 
+    const filteredName = name.replace(/[^\p{L}\s'ʼ\-]+/gu, ""); // Фільтруємо всі символи, окрім літер, пробілів, апострофів і тире
+
+    if (filteredName !== name) {
+      document.getElementById('enResponse').innerHTML = `<p>Error: Name contains invalid characters.<br>Only letters, spaces, apostrophes and hyphens are allowed.</p>`;
+      document.getElementById('plResponse').innerHTML = `<p>Błąd: Imię zawiera niedozwolone znaki.<br>Dozwolone są tylko litery, spacje, apostrofy i myślniki.</p>`;
+      return; // Зупиняємо відправку форми, якщо є недопустимі символи
+    }
+
+    console.log('second')
     document.getElementById('loader').style.display = 'block';
 
-    try {
-      const response = await fetch('https://api.playball-qa.fun/admin/contactUs', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email: email, data: `Name: ${name}. I want to be organizer (Website)` })
-      });
+    // try {
+    //   const response = await fetch('https://api.playball-qa.fun/admin/contactUs', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ email: email, data: `Name: ${name}. I want to be organizer (Website)` })
+    //   });
 
-      const result = await response.json();
+    //   const result = await response.json();
 
-      if (response.ok) {
-        document.getElementById('enResponse').innerHTML = `<p>Email sent successfully!</p>`;
-        document.getElementById('plResponse').innerHTML = `<p>E-mail wysłany pomyślnie!</p>`;
-        emailInput.value = '';
-        nameInput.value = '';
-      } else {
-        document.getElementById('enResponse').innerHTML = `<p>Error: ${result.name}</p>`;
-        document.getElementById('plResponse').innerHTML = `<p>Błąd: ${result.name}</p>`;
-      }
-    } catch (error) {
-      document.getElementById('enResponse').innerHTML = `<p>Error: Unable to send email.</p>`;
-      document.getElementById('plResponse').innerHTML = `<p>Błąd: Nie można wysłać e-maila.</p>`;
-    } finally {
-        document.getElementById('loader').style.display = 'none';
-    }
+    //   if (response.ok) {
+    //     document.getElementById('enResponse').innerHTML = `<p>Email sent successfully!</p>`;
+    //     document.getElementById('plResponse').innerHTML = `<p>E-mail wysłany pomyślnie!</p>`;
+    //     emailInput.value = '';
+    //     nameInput.value = '';
+    //   } else {
+    //     document.getElementById('enResponse').innerHTML = `<p>Error: ${result.name}</p>`;
+    //     document.getElementById('plResponse').innerHTML = `<p>Błąd: ${result.name}</p>`;
+    //   }
+    // } catch (error) {
+    //   document.getElementById('enResponse').innerHTML = `<p>Error: Unable to send email.</p>`;
+    //   document.getElementById('plResponse').innerHTML = `<p>Błąd: Nie można wysłać e-maila.</p>`;
+    // } finally {
+    //     document.getElementById('loader').style.display = 'none';
+    // }
   });
 });
