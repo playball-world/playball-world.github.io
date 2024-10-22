@@ -48,6 +48,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = emailInput.value;
     const name = nameInput.value;
 
+    const filteredName = name.replace(/[^\p{L}\s'ʼ\-]+/gu, "");
+
+    if (filteredName !== name) {
+      document.getElementById('enResponse').innerHTML = `<p>Error: Name contains invalid characters.<br>Only letters, spaces, apostrophes and hyphens are allowed.</p>`;
+      document.getElementById('plResponse').innerHTML = `<p>Błąd: Imię zawiera niedozwolone znaki.<br>Dozwolone są tylko litery, spacje, apostrofy i myślniki.</p>`;
+      return;
+    }
+
     document.getElementById('loader').style.display = 'block';
 
     try {
