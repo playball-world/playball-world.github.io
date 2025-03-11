@@ -39,6 +39,7 @@ body {
 /* HEADER */
 .header {
   position: fixed;
+  height: 74px;
   top: 0;
   left: 0;
   width: 100%;
@@ -50,6 +51,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  height: 100%;
 }
 .logo-img {
   width: 50px;
@@ -119,6 +121,9 @@ body {
   }
 }
 @media (min-width: 1024px) {
+  .header {
+    height: 94px;
+  }
   .logo-img {
     width: 70px;
     height: 70px;
