@@ -16,11 +16,6 @@
     <body class="lang-active">
         <header class="header">
             <div class="content">
-                <!-- <div class="logo">
-                    <a href="#hero">
-                        <img src="./assets/img/logo.png" alt="Logo" class="logo-img">
-                    </a>
-                </div> -->
                 <nav class="nav">
                     <ul class="nav-list">
                         <li class="nav-item text lang en">
@@ -48,14 +43,20 @@
             <section id="hero" class="section hero">
                 <div class="content hero-container">
                 <div class="hero-content">
-                    <h1 class="main-title lang en">Your Next Soccer Game, Just a Few Taps Away</h1>
-                    <h1 class="main-title lang pl">Twój następny mecz piłki nożnej w zasięgu kilku kliknięć</h1>
-                    <p class="title lang en">Soccer Where You Are: Find Local Matches That Fit Your Schedule</p>
-                    <p class="title lang pl">Piłka nożna, gdzie jesteś: znajdź lokalne mecze, które pasują do Twojego harmonogramu</p>
+                    <h1 class="main-title lang en">Playball - App for Amateur Football Events</h1>
+                    <h1 class="main-title lang pl">Playball - Aplikacja do Piłkarskich Wydarzeń Amatorskich</h1>
+                    <p class="title lang en">We organize daily training sessions, friendly matches, mini-tournaments<br>for all amateur football players.</p>
+                    <p class="title lang pl">Сodziennie organizujemy treningi, mecze towarzyskie, mini-turnieje<br>dla wszystkich chętnych amatorów piłki.</p>
                 </div>
                 <div class="hero-image-container">
-                    <img id="heroImage" src="./assets/img/phone_en.png" alt="Soccer Image" class="hero-image lang en">
-                    <img id="heroImage" src="./assets/img/phone_pl.png" alt="Soccer Image" class="hero-image lang pl">
+                    <video id="heroVideo" class="hero-image lang en" autoplay loop muted playsinline>
+                        <source src="./assets/video/phone_en.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video id="heroVideo" class="hero-image lang pl" autoplay loop muted playsinline>
+                        <source src="./assets/video/phone_pl.mp4" type="video/mp4">
+                        Twoja przeglądarka nie obsługuje tagu wideo.
+                    </video>
                 </div>
                 <div class="hero-link-block">
                     <div class="hero-stores">
@@ -179,6 +180,7 @@
                     </div>
                 </div>
             </section>
+            <button id="scrollToTop" class="scroll-to-top">&uarr;</button>
         </main>
         <footer class="footer">
             <div class="content">
