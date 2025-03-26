@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const viewportHeight = window.innerHeight;
 
       if (aboutSectionTop <= viewportHeight / 2) {
-          scrollToTopButton.style.display = "block";
+          scrollToTopButton.style.display = "flex";
       } else {
           scrollToTopButton.style.display = "none";
       }
