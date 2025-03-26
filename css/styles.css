@@ -49,6 +49,9 @@ body {
 .fw500{
   font-weight: 500;
 }
+.mb50{
+  margin-bottom: 50px;
+}
 /* HEADER */
 .header {
   position: fixed;
@@ -287,50 +290,23 @@ main {
 .role {
   background: linear-gradient(to top left, #07643C, #00421D);
 }
-.role-selector{
-  display: flex;
-  margin-top: 30px; 
-}
-.button{
-  width: calc(50% - 10px);
-  height: 50px;
-  margin-left: 5px;
-  margin-right: 5px;
-  color: white;
-  font-family: "Exo 2", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  background: linear-gradient(to top, #181313, #2C2727);
-  border: none;
-  border-radius: 10px;
-  
-}
-.button:hover{
-  background: linear-gradient(to bottom, #524c4c, #1b1919);
-}
-.button.active{
-  background: linear-gradient(to bottom, #524c4c, #1b1919);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-}
 .role-content {
   display: none;
   padding: 30px;
   min-height: calc(100vh - 100px);
 }
-.role-content.active{
+.role-content{
   display: block;  
 }
+.divider{
+  width: 95%;
+  border-bottom: #fafafa solid 2px;
+  margin: 50px auto;  
+}
+
 @media (min-width: 1024px) {
   .role-block {
-    display: flex;
-  }
-  .role-selector {
-    flex-direction: column;
-    width: 20%;
-  }
-  .button {
-    width: calc(100% - 20px);
-    margin-top: 30px;
+    width: 100%;
   }
 }
 
@@ -342,39 +318,7 @@ main {
 .player-content {
   margin-bottom: 30px;
 }
-.contact-form{
-  margin-top: 10px;
-  
-}
-.form-input {
-  border: none;
-  border-bottom: 1px solid #181313;
-  padding: 8px 0;
-  margin-bottom: 10px;
-  width: 100%;
-  outline: none;
-  font-size: 16px;
-  transition: border-color 0.3s;
-  background-color: transparent;
-  color: white;
-}
-.form-input:focus {
-  border-bottom: 2px solid #5E5959;
-}
-.loader {
-  border: 5px solid #5E5959;
-  border-top: 5px solid #013921;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-  margin: 30px auto;
-}
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 /* BANNER SECTION */
 .banner {
   display: flex;
