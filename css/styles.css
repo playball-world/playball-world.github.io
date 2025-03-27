@@ -52,6 +52,9 @@ body {
 .mb50{
   margin-bottom: 50px;
 }
+.br5{
+  border-radius: 5px;
+}
 /* HEADER */
 .header {
   position: fixed;
@@ -289,11 +292,11 @@ main {
 /* ROLE SECTION */
 .role {
   background: linear-gradient(to top left, #07643C, #00421D);
+  min-height: calc(100vh - 100px);
 }
 .role-content {
   display: none;
   padding: 30px;
-  min-height: calc(100vh - 100px);
 }
 .role-content{
   display: block;  
@@ -302,6 +305,24 @@ main {
   width: 95%;
   border-bottom: #fafafa solid 2px;
   margin: 50px auto;  
+}
+.role-images{
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.role-image{
+  width: 20%;
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease-in-out;
+}
+.role-image:hover {
+  transform: scale(1.5); 
+  z-index: 10;
+  position: relative; 
 }
 
 @media (min-width: 1024px) {
@@ -409,6 +430,13 @@ main {
 }
 .copyright {
   text-align: end;
+}
+.payment-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
 }
 @media(min-width: 1024px) {
   .social-icon{
