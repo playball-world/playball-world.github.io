@@ -1,0 +1,105 @@
+/* docs page */
+
+html, body, h1, h3, ul, ol {
+    margin: 0;
+    padding: 0; 
+    scroll-behavior: smooth;
+  }
+
+.header {
+    position: fixed;
+    height: 74px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #2C2727;
+  }
+  .header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+  }
+
+  
+
+.docs-header p{
+    font-family: "Exo 2", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color:#D9D9D9;
+  }
+  .docs-main {
+    min-height: 100vh;
+  }
+  
+  .docs-main h4, p, a {
+    color: #000;
+  }
+
+  .docs-main h4 {
+    font-family: "Exo 2", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .docs-main p {
+    font-family: "Exo 2", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+  
+  .download {
+    width: 50px;
+  }
+
+  .right{
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 50px;
+  }
+  .footer  {
+    background-color: #2C2727;
+    padding: 20px;
+  }
+
+  .footer-p {
+    font-family: "Exo 2", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color:#D9D9D9;
+  }
+  .payment-icons {
+    padding-top: 15px;
+  }
+
+  .mr5{
+    margin-right: 5px;
+  }
+
+  .pl10 {
+    padding-left: 10px;
+  }
+
+  @media (max-width: 1023px) {
+    .docs-main {
+      padding: 100px 10px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .header {
+      height: 94px;
+    }
+    .header .content{
+      padding: 10px 50px;
+    }
+    .docs-main {
+      padding: 100px;
+    }
+  }
