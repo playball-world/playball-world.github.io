@@ -8,7 +8,7 @@ html, body, h1, h3, ul, ol {
 
 .header {
     position: fixed;
-    height: 74px;
+    height: 104px;
     top: 0;
     left: 0;
     width: 100%;
@@ -23,7 +23,11 @@ html, body, h1, h3, ul, ol {
     height: 100%;
   }
 
-  
+@media(min-height: 1024px) {
+  .header {
+    height: 74px;
+  }
+}
 
 .docs-header p{
     font-family: "Exo 2", sans-serif;
